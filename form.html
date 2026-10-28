@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pemesanan - KiosKu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="logo"><span class="logo-dot"></span>KiosKu</a>
+      <nav class="nav-links">
+        <a href="index.html">Etalase</a>
+        <a href="form.html" aria-current="page">Pemesanan</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-head">
+    <div class="container">
+      <span class="eyebrow">Form Pemesanan</span>
+      <h1>Buat <span>Pesananmu</span></h1>
+      <p>Isi data di bawah ini, lalu lihat ringkasan pesananmu langsung di samping.</p>
+    </div>
+  </section>
+
+  <main class="container section">
+
+    <div id="form-alert" class="alert hidden">
+      <p id="form-alert-text"></p>
+      <button id="form-retry-btn" class="btn btn-primary" type="button">Coba Lagi</button>
+    </div>
+
+    <div class="order-layout">
+      <form id="order-form" class="card" novalidate>
+        <h2>Data Pemesan</h2>
+
+        <div class="form-group">
+          <label for="customer-name">Nama Pelanggan</label>
+          <input type="text" id="customer-name" class="control" placeholder="Masukkan nama Anda">
+          <small id="name-error" class="field-error"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="product-select">Pilih Produk</label>
+          <select id="product-select" class="control" disabled>
+            <option value="">Memuat produk...</option>
+          </select>
+          <small id="product-error" class="field-error"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="quantity">Jumlah</label>
+          <input type="number" id="quantity" class="control" placeholder="Minimal 1" value="1">
+          <small id="quantity-error" class="field-error"></small>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Pesan Sekarang</button>
+          <button type="reset" class="btn btn-outline">Reset</button>
+        </div>
+      </form>
+
+      <div id="order-summary" class="card summary-card">
+        <h2>Ringkasan Pesanan</h2>
+        <p id="summary-placeholder" class="muted">Belum ada pesanan. Isi form lalu klik "Pesan Sekarang".</p>
+
+        <dl id="summary-detail" class="hidden">
+          <div><dt>Nama Pelanggan</dt><dd id="summary-name"></dd></div>
+          <div><dt>Produk</dt><dd id="summary-product"></dd></div>
+          <div><dt>Jumlah</dt><dd id="summary-quantity"></dd></div>
+          <div><dt>Harga Satuan</dt><dd id="summary-price"></dd></div>
+          <div class="total"><dt>Total Harga</dt><dd id="summary-total"></dd></div>
+        </dl>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 KiosKu. Tugas PAW Week 6 - JavaScript DOM, Event Handling &amp; Fetch API.</p>
+    </div>
+  </footer>
+
+  <script src="form.js"></script>
+</body>
+</html>

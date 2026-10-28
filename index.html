@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Etalase - KiosKu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="logo"><span class="logo-dot"></span>KiosKu</a>
+      <nav class="nav-links">
+        <a href="index.html" aria-current="page">Etalase</a>
+        <a href="form.html">Pemesanan</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-head">
+    <div class="container">
+      <span class="eyebrow">Toko Online</span>
+      <h1>Etalase <span>KiosKu</span></h1>
+      <p>Temukan produk pilihan dengan tampilan yang nyaman dilihat dan harga yang jelas.</p>
+    </div>
+  </section>
+
+  <main class="container section">
+
+    <div id="toolbar" class="toolbar hidden">
+      <input type="search" id="search-input" class="control" placeholder="Cari produk berdasarkan nama...">
+      <select id="category-select" class="control">
+        <option value="">Semua kategori</option>
+      </select>
+    </div>
+    <p id="result-info" class="result-info"></p>
+
+    <div id="loading" class="loading hidden">
+      <div class="spinner"></div>
+      <p>Memuat data produk...</p>
+    </div>
+
+    <div id="error-box" class="alert hidden">
+      <p id="error-message"></p>
+      <button id="retry-btn" class="btn btn-primary" type="button">Coba Lagi</button>
+    </div>
+
+    <p id="empty-message" class="empty hidden">Produk tidak ditemukan. Coba kata kunci atau kategori lain.</p>
+
+    <div id="product-list" class="product-grid"></div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 KiosKu. Tugas PAW Week 6 - JavaScript DOM, Event Handling &amp; Fetch API.</p>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
